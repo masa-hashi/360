@@ -7,3 +7,19 @@ services:
       - .:/go
     ports:
       - "3000:3000"
+  db:
+    container_name: db
+    build:
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile
+    platform: linux/x86_64
+    tty: true
+    ports:
+      - 3306:3306
+    volumes:
+      - type: volume
+        source: mysql-data
+        target: /var/lib/mysql
+volumes:
+  mysql-data:
+    name: mysql-volume
