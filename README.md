@@ -8,7 +8,7 @@ $ make upd
 ```
 localhost:3000
 
-## DB
+## mysql
 
 ```
 $ docker-compose exec db bash
