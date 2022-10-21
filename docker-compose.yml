@@ -1,0 +1,9 @@
+version: '3'
+services:
+  gin:
+    build: ./docker/gin
+    tty: true
+    volumes:
+      - .:/go
+    ports:
+      - "3000:3000"
