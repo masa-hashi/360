@@ -7,3 +7,13 @@ $ git clone https://github.com/masa-hashi/360.git
 $ make upd
 ```
 localhost:3000
+
+## DB
+
+```
+$ docker-compose exec db bash
+```
+
+```
+$db$ mysql -utestuser -ptestpass 360database
+```
